@@ -31,6 +31,7 @@ export default function Sidebar({
                 {TYPES.map((t)=>(
                     <option key={{t} value={t}}/>
                 ))}
+                </select>
                 )}
             
                
