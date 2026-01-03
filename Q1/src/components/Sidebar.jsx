@@ -9,6 +9,10 @@ export default function Sidebar(){
         parkingLot:"true",
         image:""
     })
+    const handleSubmit=()=>
+    {
+        
+    }
 
     return(
         <div>
@@ -29,6 +33,7 @@ export default function Sidebar(){
                 <option>True</option>
                 <option>False</option>
             </select>
+            <button onClick={handleSubmit}>ADD</button>
             
         </div>
     )
