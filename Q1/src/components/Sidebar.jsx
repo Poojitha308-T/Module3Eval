@@ -32,6 +32,7 @@ export default function Sidebar({
                     <option key={{t} value={t}}/>
                 ))}
                 </select>
+            ):(<p>Type:{type}</p>
                 )}
             
                
@@ -39,7 +40,7 @@ export default function Sidebar({
                 <option>True</option>
                 <option>False</option>
             </select>
-            <button onClick={handleSubmit}>ADD</button>
+            <button onClick={()=>navigate('admin/update')}>ADD</button>
             
         </div>
     )
