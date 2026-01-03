@@ -11,12 +11,16 @@ export default function Sidebar(){
     })
     const handleSubmit=()=>
     {
-        
-    }
+        if(!form.restaurantName || !form.address || !form.parkingLot){
+            alert("All fields required")
+            return;
+        }
+        setForm({restaurantName:"", address:"", type:"", parkingLot:"true"});
+    };
 
     return(
         <div>
-            <img src="https://coding-platform.s3.amazonaws.com/dev/lms/tickets/7524df6e-46fa-4506-8766-eca8da47c2f1/2izhqnTaNLdenHYF.jpeg"/>
+            <img src="https://coding-platform.s3.amazonaws.com/dev/lms/tickets/7524df6e-46fa-4506-8766-eca8da47c2f1/2izhqnTaNLdenHYF.jpeg" width={"100px"}/>
             <input value={form.restaurantName} onChange={e=>setForm({...form, restaurantName: e.target.value})}/>
             <input value={form.address} onChange={e=>setForm({...form, address: e.target.value})}/>
             <select value={form.type} onChange={e=>setForm({...form, type:e.target.value })}>
