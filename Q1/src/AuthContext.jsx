@@ -13,7 +13,7 @@ export function AuthProvider({children}){
         }
         return false;
     };
-    login = (email,password)=>{
+    const login1 = (email,password)=>{
         if(email === "customer@gmail.com" && password==="customer1234"){
             setIsAuthenticated(true);
             localStorage.setItem("auth",true);
@@ -29,7 +29,7 @@ export function AuthProvider({children}){
     };
 
     return(
-        <AuthContext.Provider value={{isAuthenticated,login,logout}}>
+        <AuthContext.Provider value={{isAuthenticated,login,login1,logout}}>
             {children}
         </AuthContext.Provider>
     )
